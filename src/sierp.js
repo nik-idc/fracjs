@@ -59,8 +59,6 @@ export class SierpinskiTriangle {
       this.curLevel.push(...sierpTriangleSplit().split(triangle));
     }
 
-    console.log(this.curLevel);
-
     console.log(
       `Completed in ${performance.now() - before} ms\n` +
         `Triangles count: ${this.curLevel.length}\n` +
@@ -95,8 +93,6 @@ export class SierpinskiTriangle {
           this.prevLevels.push(this.curLevel);
           this.curLevel = [].concat(...data);
           this.curLevelNum++;
-
-          console.log(this.curLevel);
 
           console.log(
             `Completed in ${performance.now() - before} ms\n` +
